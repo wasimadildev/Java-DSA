@@ -222,6 +222,6 @@ public static void number_pyramid(int n){
         // hollow_rhombus(5);
         // diamond(4);
         // number_pyramid(5);
-palindromic_pattern_numbers(5);
+        // palindromic_pattern_numbers(5);
     }
 }
