@@ -143,8 +143,74 @@ public static void hollow_rhombus(int n){
     
 }
 
+public static void diamond(int n){
+    for(int i = 1; i <=n;i++ ){
+        for(int j = n -i; j >= 1; j-- ){
+            System.out.print("  ");
+        }
+        for(int j = 1; j <= i; j++ ){
+            System.out.print("* ");
+        }
+        if(i > 1){
+            for(int j = 2; j <= i ; j++ ){
+                System.out.print("* ");
+            }
+        }
+       
+        System.out.println();
+    }
+    for(int i = n; i >=1;i-- ){
+        for(int j = n -i; j >= 1; j-- ){
+            System.out.print("  ");
+        }
+        for(int j = 1; j <= i; j++ ){
+            System.out.print(" *");
+        }
+        if(i > 1){
+            for(int j = 2; j <= i ; j++ ){
+                System.out.print(" *");
+            }
+        }
+       
+        System.out.println();
+    }
+}
+public static void number_pyramid(int n){
+    for(int i = 1; i <=n; i++){
+        for(int j = n -i; j >= 1; j-- ){
+            System.out.print("  ");
+        }
+        for(int j = 1; j <= i ; j++ ){
+            System.out.print(" " + i  + " ");
+        }
+
+       System.out.println();
+        }
+
+
+    }
+
+    public static void palindromic_pattern_numbers(int n){
+        for(int i = 1; i <= n; i++){
+            for(int j = n -i; j >= 1; j--){
+                System.out.print("  ");
+            }
+            for(int j = i; j >= 1; j--){
+                System.out.print(j + " ");
+            }
+            if(i > 1){
+                for(int j = 2; j<=i; j++){
+                    System.out.print(j + " ");
+                }
+            }
+           
+            System.out.println();
+        }
+    }
+
 
     public static void main(String arg[]) {
+
         // hollow_rectangle(4, 5);  
         // pyramid_pattern(5);
         // inverted_rotated_half_pyramid(7);
@@ -153,6 +219,9 @@ public static void hollow_rhombus(int n){
         // zero_one_trinagle(5);
         // butterfly_pattern(6);
         // solid_rhombus(5);
-        hollow_rhombus(5);
+        // hollow_rhombus(5);
+        // diamond(4);
+        // number_pyramid(5);
+palindromic_pattern_numbers(5);
     }
 }
