@@ -211,17 +211,17 @@ public static void number_pyramid(int n){
 
     public static void main(String arg[]) {
 
-        // hollow_rectangle(4, 5);  
-        // pyramid_pattern(5);
-        // inverted_rotated_half_pyramid(7);
-        // inverted_half_pyramid_numbers(5);
-        // floyds_triangle(5);
-        // zero_one_trinagle(5);
-        // butterfly_pattern(6);
-        // solid_rhombus(5);
-        // hollow_rhombus(5);
-        // diamond(4);
-        // number_pyramid(5);
-        // palindromic_pattern_numbers(5);
+        hollow_rectangle(4, 5);  
+        pyramid_pattern(5);
+        inverted_rotated_half_pyramid(7);
+        inverted_half_pyramid_numbers(5);
+        floyds_triangle(5);
+        zero_one_trinagle(5);
+        butterfly_pattern(6);
+        solid_rhombus(5);
+        hollow_rhombus(5);
+        diamond(4);
+        number_pyramid(5);
+        palindromic_pattern_numbers(5);
     }
 }
