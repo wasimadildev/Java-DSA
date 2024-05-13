@@ -62,6 +62,7 @@ public class Arrays {
     }
     return 1;
    }
+   
 public static void reverse(int arr[]){
     int start = 0;
     int end = arr.length -1;
@@ -106,6 +107,7 @@ public static void subarrays(int arr[]){
     }
     System.out.println(total);
 }
+
 public static void max_subarrays(int arr[]){
     int currsum = 0;
     int maxsum = Integer.MIN_VALUE;
@@ -127,7 +129,46 @@ public static void max_subarrays(int arr[]){
   }
   
 
-// Note Assignment find max and min subarray
+  public static void prefix_max_subarray(int arr[]){
+    int currsum = 0;
+    int max = Integer.MAX_VALUE;
+    
+    int prefix[] = new int[arr.length];
+    prefix[0] = arr[0];
+    for (int i = 1; i < prefix.length; i++) {
+        prefix[i] = prefix[i -1] + arr[i];
+        
+    }
+
+    for(int i = 1; i <=arr.length; i++){
+
+        for(int j = i ; j <= arr.length; j++){
+            currsum = i == 0? prefix[j] : prefix[j] - prefix[i - 1];
+            if(max < currsum){
+                max = currsum;
+            }
+        }
+    }
+
+  }
+
+
+  public static void kadane_max_subarray(int arr[]){
+    int currsum = 0;
+    int maxsum = Integer.MIN_VALUE;
+    for (int i = 0; i < arr.length; i++) {
+        currsum = currsum + arr[i];
+        if(currsum < 0){
+            currsum = 0;
+        }
+        maxsum = Math.max(currsum, maxsum);
+    }
+    System.out.println(maxsum);
+  }
+
+// Note Assignment DRY RUN ALL Questions
+
+
 public static void main(String[] args) {
 
 // int arr[]  = {11,4,5,5,30,10,15,17};
@@ -144,7 +185,8 @@ int arr[] = {1,2,3,4};
 //     System.out.print(arr[i] + " ");
 // }
 // subarrays(arr);
-max_subarrays(arr);
+// max_subarrays(arr);
+kadane_max_subarray(arr);
 
 }
 }
